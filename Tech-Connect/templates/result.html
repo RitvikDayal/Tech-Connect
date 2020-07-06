@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Test Run Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+</head>
+
+<body>
+    <h1 class="text-center text-info border rounded border-info shadow d-block" style="margin-top: 30px;margin-bottom: 20px;margin-left: 0;">Your Test Run Result</h1>
+    <div class="container" style="width: 820px;height: 339px;margin-top: 60px;margin-bottom: 40px;background-color: rgba(1,1,1,0);background-image: url({{ url_for('static', filename='assets/img/background.jpg')}});filter: blur(0px) brightness(102%) contrast(123%);opacity: 0.93;">
+        <p class="text-left" style="color: rgb(255,255,255);font-size: 31px;padding: 0px;padding-top: 43px;padding-left: 115px;">
+        Model Name: {{ model }}
+        Result: {{ result }}
+        </p>
+    </div>
+    <div></div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="width: 200px;"><a class="text-center text-primary" href="#" style="width: 50px;height: 30px;font-size: 32px;margin-left: 0px;padding-left: 225px;">Link</a></div>
+                <div class="col-md-6" style="width: 200px;padding-right: 15px;"><a href="#" style="font-size: 32px;padding-left: 162px;">Link</a></div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>

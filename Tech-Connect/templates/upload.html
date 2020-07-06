@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="padding: 0px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>model_upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.min.css') }}">
+</head>
+
+<body>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder" style="background-image: url({{ url_for ('static', filename='assets/img/1426870.png')}});filter: blur(0px) saturate(100%);"></div>
+            <form action='/handleUpload' method="post" style="height: 750px;width: 500px;">
+                <h2 class="text-center"><strong>Information about Your Model</strong>.</h2>
+                <div class="form-group"><input class="border rounded form-control" type="text" name="Model Name" placeholder="Model Name" style="padding: 6px;padding-top: 6px;margin: 0px;margin-top: 5px;margin-bottom: 26px;" required=""></div>
+                <p>Upload Model File:&nbsp;</p><input type="file" name="Upload Model File" value="model_file" required="" style="padding: 0px;padding-bottom: 18px;margin-bottom: 12px;">
+                <div class="form-group"><select class="border rounded custom-select" value="Type of Model" name="Type of Model" required="" style="margin-bottom: 11px;"><optgroup label="Model Type"><option value="-1" selected="">&lt;Modle Type&gt;</option><option value="1">Machine Learning</option><option value="2">D.L. with Tensorflow</option><option value="3">D.L. With Pytorch</option></optgroup></select></div>
+                <div
+                    class="form-group">
+                    <h5 style="margin-bottom: 12px;">Test Input Type</h5>
+                    <div class="form-check" style="margin-bottom: 6px;"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="font-size: 18px;">Numeric</label></div>
+                    <div class="form-check" style="margin-bottom: 6px;"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="font-size: 18px;">String</label></div>
+        </div>
+        <h5 style="margin-bottom: 18px;">Input Description (Optional)</h5>
+        <div class="form-group"><textarea class="form-control" name="Input Description" placeholder="Instruction for user to follow while providing input for the model." rows="6" style="height: 109px;margin-bottom: 40px;"></textarea></div>
+        <p>Featured Image( optional ):&nbsp;</p><input type="file" name="featured_image" accept="image/*">
+        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">UPLOAD</button></div>
+        </form>
+    </div>
+    </div>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Test Run | Tech-Connect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='input.css')}}">
+</head>
+
+<body>
+    <div class="contact-clean" style="height: 100vh;width: 100%;">
+        <form method="POST">
+            <h2 class="text-center">It's Time to Run the Model</h2>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Student Knowledge Prediction" disabled=""></div>
+            <div class="form-group">
+                <h5>Please Provide the Test Input.</h5>
+                <p>Follow the following instruction while providing the input.</p>
+            </div>
+            <div class="form-group"><textarea class="form-control" name="test_input" placeholder="Your Test Input" rows="8" autofocus="" required=""></textarea></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">RUN</button></div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='assets/js/input_jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>
